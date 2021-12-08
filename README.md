@@ -9,8 +9,9 @@ This method is great for **fast frontend development**. No need to write your ow
 
 ### Use case:
 
-Your PSD/figma design has form labels **{font-size: 16px, color: #fff}**. We need to find the variables responsive for form labels.
-found in **bootstrap/scss/forms/_labels.scss**. 
+Your PSD/figma design has form labels **{font-size: 16px, color: #fff}**.  
+We need to find the variables responsive for form labels.  
+found in **bootstrap/scss/forms/_labels.scss**.  
 
 ```bash
 .form-label {
@@ -22,7 +23,7 @@ found in **bootstrap/scss/forms/_labels.scss**.
 }
 ```
 
-open **_variables.scss** and override the defaults.
+open **_variables.scss** and override the defaults.  
 
 ```bash
 $form-label-color: #fff;
@@ -32,6 +33,7 @@ form-label-font-size: 16px;
 #### CSS classes included.
 
 All added variables are declared inside **_variables.scss**.
+  
 
 ##### Font size
 
@@ -55,6 +57,7 @@ css classes generated:
 .line-height-...
 ....
 ```
+  
 
 ##### Custom height/width
 
