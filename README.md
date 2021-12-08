@@ -29,11 +29,11 @@ $form-label-color: #fff;
 form-label-font-size: 16px;
 ```
 
-##### CSS classes included.
+#### CSS classes included.
 
 All added variables are declared inside **_variables.scss**.
 
-###### Font size
+##### Font size
 
 Example of 0.9rem.
 
@@ -56,7 +56,7 @@ css classes generated:
 ....
 ```
 
-###### Custom height/width
+##### Custom height/width
 
 Example of 100px.
 
