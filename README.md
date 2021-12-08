@@ -1,2 +1,3 @@
-# boostrap5-sass
-Bootstrap 5 starting point.
+# Boostrap 5 Sass + Vue 2
+
+### Why this repo?

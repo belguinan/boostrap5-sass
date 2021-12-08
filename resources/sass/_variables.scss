@@ -1,0 +1,416 @@
+// Body
+$body-bg: #fff;
+$body-color: #2A2F30;
+
+// Custom colors
+$black: #000;
+$white: #fff;
+$dark: #363C3F;
+$blue: #499FAC;
+$orange: #FFBA53;
+$secondary-2: #5e6365;
+$secondary-3: #C4C4C4;
+$secondary-4: #E7E7E7;
+$lighter: #EDEDED;
+$light-2: #F8F8F8;
+$light-3: #F9F9F9;
+
+// 
+$yellow: #DBFF00;
+
+// Custom soft colors
+$soft-dark: #535B62;
+$soft-blue: #6eb2bc;
+$soft-blue-2: #c4edf1;
+
+// nagetive margin
+$enable-negative-margins: true;
+
+// form grid class
+$enable-grid-classes: true;
+
+// 
+$enable-reduced-motion: false;
+
+//
+$custom-colors: (
+    'black': $black,
+    'white': $white,
+    'dark': $dark,
+    'blue': $blue,
+    'light-2': $light-2,
+    'light-3': $light-3,
+    'lighter': $lighter,
+
+    'default': $body-color,
+    'orange': $orange,
+    'soft-dark': $soft-dark,
+    'soft-blue': $soft-blue,
+    'soft-blue-2': $soft-blue-2,
+
+    'yellow': $yellow,
+    'secondary-2': $secondary-2,
+    'secondary-3': $secondary-3,
+    'secondary-4': $secondary-4,
+);
+
+$primary: #8BD2DD; // soft blue
+$success: #34C759; // green
+$secondary: #9AA2A5; // soft gray
+$light: #E5E5E5;
+$muted: #BDBDBD;
+$danger: #dc3545;
+
+$theme-colors: (
+    'primary': $primary,
+    'success': $success,
+    'secondary': $secondary,
+    'muted': $muted,
+    'light': $light,
+    'danger': $danger,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Navbar
+$navbar-light-color: #13042C;
+
+// Border
+$border-color: $lighter;
+
+// Typography
+$font-family-sans-serif: 'Montserrat', sans-serif, system-ui, monospace;
+$font-size-base: 1rem;
+$line-height-base: 1.55;
+
+// H1 ..
+$headings-line-height: 1.4;
+$headings-font-weight: 700;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-semi-bold:       600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+// Navbar
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 0.5rem;
+$navbar-toggler-focus-width: 0;
+$nav-link-hover-color: $blue;
+
+$form-switch-focus-color: $secondary;
+$form-switch-width: 2.7em;
+
+// inputs
+$input-border-radius: 0;
+$input-padding-y: 0.475rem;
+
+// Box Shadow
+$box-shadow:    0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-xl: 21px 21px 30px rgba(0, 0, 0, 0.12);
+
+// Border
+$border-radius:   .25rem;
+$border-radius-1: .1rem;
+$border-radius-2: .2rem;
+$border-radius-3: .3rem;
+$border-radius-4: .4rem;
+$border-radius-5: .5rem;
+$border-radius-6: .6rem;
+$border-radius-7: .7rem;
+$border-radius-8: .8rem;
+
+$border-radius-pill:    50rem;
+
+//
+$utilities: (
+    "opacity": (
+        property: opacity,
+        values: (
+            0: 0,
+            5: .05,
+            10: .10,
+            15: .15,
+            20: .20,
+            25: .25,
+            30: .30,
+            40: .40,
+            50: .50,
+            60: .60,
+            65: .65,
+            70: .70,
+            75: .75,
+            80: .80,
+            85: .85,
+            90: .90,
+            95: .95,
+            100: 1,
+        )
+    ),
+    "font-weight": (
+        property: font-weight,
+        class: fw,
+        values: (
+            light: $font-weight-light,
+            lighter: $font-weight-lighter,
+            normal: $font-weight-normal,
+            semi-bold: $font-weight-semi-bold,
+            bold: $font-weight-bold,
+            bolder: $font-weight-bolder
+        )
+    ),
+    "shadow": (
+        property: box-shadow,
+        class: shadow,
+        values: (
+            null: $box-shadow,
+            sm: $box-shadow-sm,
+            lg: $box-shadow-lg,
+            xl: $box-shadow-xl,
+            none: none,
+        )
+    ),
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-1,
+            2: $border-radius-2,
+            3: $border-radius-3,
+            4: $border-radius-4,
+            5: $border-radius-5,
+            6: $border-radius-6,
+            7: $border-radius-7,
+            8: $border-radius-8,
+            circle: 50%,
+            pill: $border-radius-pill
+        )
+    ),
+    "rounded-bottom": (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-1,
+            2: $border-radius-2,
+            3: $border-radius-3,
+            4: $border-radius-4,
+            5: $border-radius-5,
+            6: $border-radius-6,
+            7: $border-radius-7,
+            8: $border-radius-8,
+        )
+    ),
+    "rounded-top": (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-1,
+            2: $border-radius-2,
+            3: $border-radius-3,
+            4: $border-radius-4,
+            5: $border-radius-5,
+            6: $border-radius-6,
+            7: $border-radius-7,
+            8: $border-radius-8,
+        )
+    ),
+    "rounded-end": (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-1,
+            2: $border-radius-2,
+            3: $border-radius-3,
+            4: $border-radius-4,
+            5: $border-radius-5,
+            6: $border-radius-6,
+            7: $border-radius-7,
+            8: $border-radius-8,
+        )
+    ),
+    "rounded-start": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-1,
+            2: $border-radius-2,
+            3: $border-radius-3,
+            4: $border-radius-4,
+            5: $border-radius-5,
+            6: $border-radius-6,
+            7: $border-radius-7,
+            8: $border-radius-8,
+        )
+    ),
+    "z-index": (
+        property: z-index,
+        class: z-index,
+        values: (
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 3,
+            4: 4,
+        )
+    ),
+);
+
+// Grid
+$grid-breakpoints: (
+  	xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+
+// Custom variables
+$custom-breakpoints: (
+	'xs', 'sm', 'md', 'lg', 'xl', 'xxl'
+);
+
+$custom-font-sizes: (
+    '4rem',
+    '3.6rem',
+    '3.5rem',
+    '3.2rem',   // 48px
+    '3rem',
+    '2.8rem',
+    '2.7rem',   // 40px
+    '2.6rem',
+    '2.5rem',
+    '2.2rem',
+    '2.1rem',
+    '2rem',     // 30px
+    '1.8rem',
+    '1.75rem',  // 26px
+    '1.7rem',
+    '1.65rem',
+    '1.6rem',   // 25px
+    '1.5rem',
+    '1.4rem',   // 20px
+    '1.3rem',
+    '1.2rem',   // 18px
+    '1.15rem',
+    '1.14rem',
+    '1.13rem',
+    '1.12rem',
+    '1.11rem',
+    '1.1rem',
+    '1.08rem',
+    '1.07rem',  // 16px
+    '1.05rem',
+    '1rem',
+    '0.95rem',
+    '0.9rem',
+    '0.88rem',
+    '0.87rem', // 14px
+    '0.85rem',
+    '0.8rem',
+    '0.75rem',
+    '0.7rem',
+    '0.6rem',
+    '0.5rem',
+);
+
+$custom-width-sizes: (
+    '1400px',
+    '1350px',
+    '1300px',
+    '1250px',
+    '1200px',
+    '1100px',
+    '1000px',
+    '950px',
+    '920px',
+    '900px',
+    '850px',
+    '822px',
+    '800px',
+    '750px',
+    '700px',
+    '680px',
+    '650px',
+    '600px',
+    '580px',
+    '576px',
+    '550px',
+    '515px',
+    '500px',
+    '470px',
+    '460px',
+    '450px',
+    '425px',
+    '400px',
+    '385px',
+    '350px',
+    '300px',
+    '290px',
+    '260px',
+    '250px',
+    '220px',
+    '210px',
+    '200px',
+    '190px',
+    '170px',
+    '167px',
+    '150px',
+    '120px',
+    '110px',
+    '100px',
+    '90px',
+    '80px',
+    '75px',
+    '70px',
+    '66px',
+    '65px',
+    '60px',
+    '55px',
+    '50px',
+    '48px',
+    '43px',
+    '42px',
+    '40px',
+    '35px',
+    '33px',
+    '32px',
+    '30px',
+    '29px',
+    '28px',
+    '27px',
+    '26px',
+    '25px',
+    '20px',
+    '14px',
+    '90%',
+    '85%',
+    '80%',
+    '50%',
+    '20%',
+    '15%',
+    '10%',
+);

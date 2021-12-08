@@ -1,0 +1,262 @@
+@each $breakpoint in $custom-breakpoints {
+
+    @each $size in $custom-font-sizes {
+
+        $breakpoint-prefix: '-' + #{$breakpoint};
+
+        @if $breakpoint == 'xs' {
+            $breakpoint-prefix: '';
+        }
+
+        @include media-breakpoint-up(#{$breakpoint}) {
+            .font-size#{$breakpoint-prefix}-#{str-replace($size, '.', '-')} {
+                font-size: #{$size};
+            }
+
+            .line-height#{$breakpoint-prefix}-#{str-replace($size, '.', '-')} {
+                line-height: #{$size};
+            }
+        }
+    }
+
+    @each $size in $custom-width-sizes {
+
+        $breakpoint-prefix: '-' + #{$breakpoint};
+
+        @if $breakpoint == 'xs' {
+            $breakpoint-prefix: '';
+        }
+
+        @include media-breakpoint-up(#{$breakpoint}) {
+            .w#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                width: #{$size} !important;
+            }
+
+            .max-w#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                max-width: #{$size} !important;
+            }
+
+            .min-w#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                min-width: #{$size} !important;
+            }
+
+            .h#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                height: #{$size} !important;
+            }
+
+            .max-h#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                max-height: #{$size} !important;
+            }
+
+            .min-h#{$breakpoint-prefix}-#{str-replace($size, '%', '')} {
+                min-height: #{$size} !important;
+            }
+        }
+    }
+
+    $breakpoint-prefix: '-' + #{$breakpoint};
+
+    @if $breakpoint == 'xs' {
+        $breakpoint-prefix: '';
+    }
+
+    @include media-breakpoint-up(#{$breakpoint}) {
+        .fw#{$breakpoint-prefix}-bold {
+            font-weight: bold !important;
+        }
+
+        .fw#{$breakpoint-prefix}-semi-bold {
+            font-weight: 600 !important;
+        }
+
+        .fw#{$breakpoint-prefix}-normal {
+            font-weight: normal !important;
+        }
+
+        .fw#{$breakpoint-prefix}-light {
+            font-weight: 300 !important;
+        }
+
+        @if $breakpoint-prefix != '' {
+            .border#{$breakpoint-prefix} {
+                border: 1px solid $border-color !important;
+            }
+        }
+
+        .shadow#{$breakpoint-prefix}-2 {
+            box-shadow: $box-shadow !important;
+        }
+
+        .shadow#{$breakpoint-prefix}-1 {
+            box-shadow: $box-shadow-sm !important;
+        }
+        
+        .shadow#{$breakpoint-prefix}-3 {
+            box-shadow: $box-shadow-lg !important;
+        }
+        
+        .shadow#{$breakpoint-prefix}-4 {
+            box-shadow: $box-shadow-xl !important;
+        }
+
+        .shadow#{$breakpoint-prefix}-0 {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.rounded-end-lg-6 {
+    @include media-breakpoint-up('lg') {
+        border-top-right-radius: $border-radius-6 !important;
+        border-bottom-right-radius: $border-radius-6 !important;
+        border-bottom-left-radius: 0px !important;
+    }
+}
+
+.rounded-start-lg-6 {
+    @include media-breakpoint-up('lg') {
+        border-top-left-radius: $border-radius-6 !important;
+        border-bottom-left-radius: $border-radius-6 !important;
+        border-top-right-radius: 0px !important;
+    }
+}
+
+@each $custom-color, $value in $custom-colors {
+
+    .btn-#{$custom-color} {
+        &:hover {
+            transition: background-color .25s ease;
+            background-color: darken($value, 6);
+            border-color: darken($value, 6);
+        }
+    }
+
+    .bg-#{$custom-color}-hover {
+        &:hover {
+            transition: background-color .15s ease;
+            background-color: $value !important;
+        }
+    }
+
+    .text-#{$custom-color}-hover {
+        &:hover {
+            transition: color .15s ease;
+            color: $value !important;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+
+    .btn-#{$color} {
+        &:hover {
+            transition: background-color .25s ease;
+            background-color: darken($value, 6);
+            border-color: darken($value, 6);
+        }
+    }
+
+    .bg-#{$color}-hover {
+        &:hover {
+            transition: background-color .15s ease;
+            background-color: $value !important;
+        }
+    }
+
+    .text-#{$color}-hover {
+        &:hover {
+            transition: color .15s ease;
+            color: $value !important;
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.scale-hover {
+    transform: scale(1.0);
+    transition: transform .15s ease;
+    &:hover {
+        transform: scale(1.01);
+        transition: transform .15s ease;
+    }
+}
+
+.shadow-hover {
+    transition: box-shadow .15s ease;
+    &:hover {
+        transition: box-shadow .15s ease;
+        box-shadow: $box-shadow !important;
+    }
+}
+
+.shadow-sm-hover {
+    transition: box-shadow .15s ease;
+    &:hover {
+        transition: box-shadow .15s ease;
+        box-shadow: $box-shadow-sm !important;
+    }
+}
+
+.bg-opacity-black {
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.shadow-lg-hover {
+    &:hover {
+        transition: box-shadow .15s ease;
+        box-shadow: $box-shadow-lg !important;
+    }
+}
+
+.shadow-xl-hover {
+    &:hover {
+        transition: box-shadow .15s ease;
+        box-shadow: $box-shadow-xl !important;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1.4s !important;
+}
+
+.opacity-100-hover {
+    transition: opacity .15s ease;
+    &:hover {
+        transition: opacity .15s ease;
+        opacity: 1 !important;
+    }
+}
+
+.hover-wiggle {
+    &:hover {
+        -webkit-animation-name: wiggle;
+        -ms-animation-name: wiggle;
+        -ms-animation-duration: .85s;
+        -webkit-animation-duration: .85s;
+        -webkit-animation-iteration-count: 1;
+        -ms-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease-in-out;
+        -ms-animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes wiggle {
+    0% {transform: translateX(0px)}
+    25% {transform: translateX(-2px);}
+    50% {transform: translateX(2px);}
+    75% {transform: translateX(-2px);}
+    100% {transform: translateX(0px)}
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: scale(.2,.2) }
+    100% { opacity: 1; transform: scale(1,1) }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
