@@ -13,7 +13,7 @@ Your PSD/figma design has form labels **{font-size: 16px, color: #fff}**.
 We need to find the variables responsive for form labels.  
 found in **bootstrap/scss/forms/_labels.scss**.  
 
-```html
+```scss
 .form-label {
 	margin-bottom: $form-label-margin-bottom;
 	@include font-size($form-label-font-size);
@@ -25,7 +25,7 @@ found in **bootstrap/scss/forms/_labels.scss**.
 
 open **_variables.scss** and override the defaults.  
 
-```html
+```scss
 $form-label-color: #fff;
 form-label-font-size: 16px;
 ```
@@ -39,7 +39,7 @@ All added variables are declared inside **_variables.scss**.
 
 Example of 0.9rem.
 
-```html
+```scss
 $custom-font-sizes: (
 	'0.9rem'
 )
@@ -47,7 +47,7 @@ $custom-font-sizes: (
 
 css classes generated:
 
-```html
+```scss
 .font-size-0-9rem
 .font-size-{breakpoint}-0-9rem
 .font-size-md-0-9rem
@@ -63,7 +63,7 @@ css classes generated:
 
 Example of 100px.
 
-```html
+```scss
 $custom-width-sizes: (
 	'100px'
 )
@@ -71,7 +71,7 @@ $custom-width-sizes: (
 
 css classes generated:
 
-```html
+```scss
 .h-100px
 .min-h-100px
 .max-h-100px
