@@ -9,7 +9,7 @@ This method is great for **fast frontend development**. No need to write your ow
 
 ### Use case:
 
-Your PSD/figma design has form labels {font-size: 16px, color: #fff}. We need to find the variables responsive for form labels.
+Your PSD/figma design has form labels **{font-size: 16px, color: #fff}**. We need to find the variables responsive for form labels.
 found in **bootstrap/scss/forms/_labels.scss**. 
 
 ```bash
