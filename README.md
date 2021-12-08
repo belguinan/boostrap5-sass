@@ -1,4 +1,4 @@
-## Boostrap 5 Sass
+## Boostrap 5 SASS
 
 #### Why this repo?
 
