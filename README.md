@@ -2,7 +2,7 @@
 
 ## Why this repo?
 
-Utility css is great. but making the whole css/html components from scratch is hard.
+Speedup your development workflow!  
 We can achieve the same result as [tailwindCSS](https://tailwindcss.com/) using **bootstrap theming** [Read more.](https://getbootstrap.com/docs/4.0/getting-started/theming/).
 
 This method is great for **fast frontend development**. No need to write your own css.
