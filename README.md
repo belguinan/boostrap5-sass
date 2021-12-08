@@ -27,7 +27,7 @@ open **_variables.scss** and override the defaults.
 
 ```scss
 $form-label-color: #fff;
-form-label-font-size: 16px;
+$form-label-font-size: 16px;
 ```
 
 ### CSS classes included.
