@@ -1,8 +1,7 @@
-# Boostrap 5 SASS
+# Boostrap 5 SASS - boost your development workflow!
 
 ## Why this repo?
 
-Speedup your development workflow!  
 We can achieve the same result as [tailwindCSS](https://tailwindcss.com/) using **bootstrap theming** [Read more.](https://getbootstrap.com/docs/4.0/getting-started/theming/).
 
 This method is great for **fast frontend development**. No need to write your own css.
