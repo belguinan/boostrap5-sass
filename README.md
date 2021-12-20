@@ -1,4 +1,4 @@
-# Boostrap 5 SASS - boost your development workflow!
+# Boost your Bootstrap 5 development workflow!
 
 ## Why this repo?
 
